@@ -23,7 +23,6 @@
 
     <?php
     if ( isset($_GET['item']) ) {
-        
         switch ($_GET['item']) {
             case 1: $url = "https://en.wikipedia.org/wiki/API"; break;
             case 2: $url = "https://en.wikipedia.org/wiki/Systems_architecture"; break;
