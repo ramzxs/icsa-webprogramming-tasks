@@ -14,6 +14,20 @@
 <body>
     <h1>DIARY APP (TASK 1.1.2)</h1>
 
+    <h2>Create</h2>
+
+    <?php
+    if ( isset($_POST['num']) ) {
+        $fileName = 'entry' . $_POST['num'] . '.txt';
+        // Override?
+        $file = fopen($fileName, 'w') or die("Unable to open file for write access.");
+        fwrite($file, $_POST["content"]);
+        fclose($file);
+
+        echo '<b><i>Diary entry has been successfully saved.</i></b><br><br>';
+    }
+    ?>
+
     <form action="?" method="post">
         <label for="num">Entry Number:</label>
         <input type="number" name="num" id="num">
