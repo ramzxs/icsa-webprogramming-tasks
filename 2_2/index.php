@@ -20,7 +20,9 @@
     <table border="1" cellspacing="0" cellpadding="10">
         <tr>
             <td>Current Date:</td>
-            <td>CURRENT</td>
+            <td>
+                <?= date('Y F d h:i:s a') ?>
+            </td>
         </tr>
         <tr>
             <td>Add:</td>
