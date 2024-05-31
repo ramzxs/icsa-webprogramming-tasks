@@ -32,7 +32,14 @@
         </tr>
         <tr>
             <td>Result:</td>
-            <td>RESULT</td>
+            <td>
+                <?php
+                // Unix timestamp
+                $result = strtotime('2024-05-31 +2 days');
+
+                echo date('Y F d h:i:s a', $result);
+                ?>
+            </td>
         </tr>
         <tr>
             <td></td>
