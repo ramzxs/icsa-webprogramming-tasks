@@ -35,7 +35,8 @@
             <td>
                 <?php
                 if ( isset( $_GET['days'] ) ) {
-                    $result = strtotime('2024-05-31 '.$days.' days'); // Unix timestamp
+                    $currentDateTime =  date('Y-m-d H:i:s'); // 2024-05-31 11:56:00
+                    $result = strtotime($currentDateTime . ' ' . $days .' days'); // Unix timestamp
 
                     echo date('Y F d h:i:s a', $result);
                 }
