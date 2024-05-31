@@ -34,10 +34,11 @@
             <td>Result:</td>
             <td>
                 <?php
-                // Unix timestamp
-                $result = strtotime('2024-05-31 +2 days');
+                if ( isset( $_GET['days'] ) ) {
+                    $result = strtotime('2024-05-31 '.$days.' days'); // Unix timestamp
 
-                echo date('Y F d h:i:s a', $result);
+                    echo date('Y F d h:i:s a', $result);
+                }
                 ?>
             </td>
         </tr>
