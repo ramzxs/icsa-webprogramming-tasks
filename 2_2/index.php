@@ -13,6 +13,7 @@
     if ( isset( $_GET['days'] ) ) {
         $days = $_GET['days'];
     }
+
     ?>
 
 
@@ -21,7 +22,7 @@
         <tr>
             <td>Current Date:</td>
             <td>
-                <?= date('Y F d h:i:s a') ?>
+                <?= date('Y F d l h:i:s a') ?>
             </td>
         </tr>
         <tr>
@@ -35,10 +36,11 @@
             <td>
                 <?php
                 if ( isset( $_GET['days'] ) ) {
-                    $currentDateTime =  date('Y-m-d H:i:s'); // 2024-05-31 11:56:00
+                    $currentDateTime =  date('Y-m-d H:i:s'); // 2024-05-31 11:56:00                    
+                                        // <Date Time>           <#>      days 
                     $result = strtotime($currentDateTime . ' ' . $days .' days'); // Unix timestamp
 
-                    echo date('Y F d h:i:s a', $result);
+                    echo date('Y F d l h:i:s a', $result);
                 }
                 ?>
             </td>
