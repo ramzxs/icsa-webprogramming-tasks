@@ -27,13 +27,7 @@
                     </a>
                 </td>
                 <td>
-                    <?php
-                    if (
-                        isset($_GET['id'])
-                        && $_GET['id'] == $row['id']
-                    ) {
-                        echo $row['name'];
-                    } ?>
+                    <!-- AJAX -->
                 </td>
             </tr>
             <?php
@@ -43,7 +37,8 @@
     <script>
         async function loadData(n) {
             const response = await fetch('loaddata.php');
-            console.log(response.text());
+            const text = await response.text();
+            alert(text);
         }
     </script>
 </body>
