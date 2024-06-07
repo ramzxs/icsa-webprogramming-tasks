@@ -19,26 +19,29 @@
             <th>NAME</th>
         </tr>
         <?php
-        while ($row = $result->fetch_assoc()) { ?>
+        for ($i = 1; $row = $result->fetch_assoc(); $i++) { ?>
             <tr>
                 <td>
-                    <a href="javascript:loadData('<?= $row['id'] ?>')">
+                    <a href="javascript:loadData(
+                            '<?= $row['id'] ?>',
+                            '<?= $i ?>'
+                    )">
                         <?= $row['id'] ?>
                     </a>
                 </td>
-                <td>
+                <td id="cell<?= $i ?>">
                     <!-- AJAX -->
                 </td>
             </tr>
-            <?php
+            <?php         
         }
         ?>
     </table>
     <script>
-        async function loadData(n) {
-            const response = await fetch('loaddata.php');
+        async function loadData(studentID, cellNum) {
+            const response = await fetch('loaddata.php?id=' + studentID);
             const text = await response.text();
-            alert(text);
+            document.getElementById('cell' + cellNum).innerHTML = text;
         }
     </script>
 </body>
