@@ -6,7 +6,7 @@
     <title>Students (Modern)</title>
     <style>
         body {
-            margin: 0;
+            margin: 10px;
             font-family: monospace;
             color: white;
             background-color: black;
