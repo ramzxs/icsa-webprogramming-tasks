@@ -8,6 +8,11 @@
 <body>
     <h1>LIST OF STUDENTS</h1>
 
+    <?php
+    $DBCONN = new mysqli('localhost', 'root', '', 'icsa_webprogramming_university_db');
+    $result = $DBCONN->query("SELECT * FROM `student` ORDER BY `id`");
+    ?>
+
     <table border="1" cellspacing="0" cellpadding="10">
         <tr>
             <td>ID</td>
