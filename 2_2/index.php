@@ -36,11 +36,8 @@
             <td>
                 <?php
                 if ( isset( $_GET['days'] ) ) {
-                    $currentDateTime =  date('Y-m-d H:i:s'); // 2024-05-31 11:56:00                    
-                                        // <Date Time>           <#>      days 
-                    $result = strtotime($currentDateTime . ' ' . $days .' days'); // Unix timestamp
-
-                    echo date('Y F d l h:i:s a', $result);
+                    $result = compute($days);
+                    echo '<b>'.$result.'</b>';
                 }
                 ?>
             </td>
@@ -55,3 +52,13 @@
     </form>
 </body>
 </html>
+
+<?php
+
+function compute($days) {
+    $currentDateTime =  date('Y-m-d H:i:s');               
+                                        // <Date Time>           <#>      days 
+    $result = strtotime($currentDateTime . ' ' . $days .' days'); // Unix timestamp
+
+    return date('Y F d l h:i:s a', $result);
+}

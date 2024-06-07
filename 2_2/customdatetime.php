@@ -31,7 +31,7 @@
     <form action="?" method="get">
     <table border="1" cellspacing="0" cellpadding="10">
         <tr>
-            <td>Current Date:</td>
+            <td>User-Defined Date:</td>
             <td>
                 <input name="customDate" type="date" value="<?= $customDate ?>">
                 <input name="customTime" type="time" value="<?= $customTime ?>"
@@ -39,7 +39,7 @@
             </td>
         </tr>
         <tr>
-            <td>Add:</td>
+            <td>Add Number of Days:</td>
             <td>
                 <input name="days" type="number" value="<?= $days ?>"> day(s)
             </td>
