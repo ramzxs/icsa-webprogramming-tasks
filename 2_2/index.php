@@ -57,7 +57,7 @@
 
 function compute($days) {
     $currentDateTime =  date('Y-m-d H:i:s');               
-                                        // <Date Time>           <#>      days 
+                        // <Date Time>           <#>      days (keyword) 
     $result = strtotime($currentDateTime . ' ' . $days .' days'); // Unix timestamp
 
     return date('Y F d l h:i:s a', $result);
