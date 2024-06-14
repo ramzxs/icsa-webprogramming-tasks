@@ -25,7 +25,7 @@
                             <a class="nav-link active" aria-current="page" href=".">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php">About Us</a>
+                            <a class="nav-link" href="about.php">About</a>
                         </li>
                     </ul>
                     <a class="btn btn-outline-success" href="login.php">Login</a>
@@ -33,7 +33,25 @@
             </div>
         </nav>
     </header>
-    <h1>University eLearning Platform</h1>
+
+    <main class="container">
+        <h1>Welcome to Q8 University eLearning Platform!</h1>
+
+        <img src="assets/campus.jpg" class="w-100" alt="Campus">
+    </main>
+
+    <footer>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="." class="nav-link px-2 text-body-secondary">Home</a></li>                    
+                    <li class="nav-item"><a href="about.php" class="nav-link px-2 text-body-secondary">About</a></li>
+                    <li class="nav-item"><a href="login.php" class="nav-link px-2 text-body-secondary">Login</a></li>                    
+                </ul>
+                <p class="text-center text-body-secondary">© 2024 Q8University</p>
+            </footer>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
