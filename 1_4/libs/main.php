@@ -4,7 +4,7 @@
  */
 
 
- function printHeader() {
+ function printHeader($userIsIn = 'N') {
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,13 +30,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href=".">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.php">About</a>
-                        </li>
+                            <a class="nav-link active" aria-current="page" href="."><?= ($userIsIn == 'Y') ? 'Dashboard' : 'Home' ?></a>
+                        </li> <?php
+                        if ($userIsIn == 'N') { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.php">About</a>
+                            </li>
+                            <?php
+                        } ?>
                     </ul>
-                    <a class="btn btn-outline-success" href="login.php">Login</a>
+                    <a class="btn btn-outline-success" href="<?= ($userIsIn == 'Y') ? 'logout.php' : 'login.php' ?>"><?= ($userIsIn == 'Y') ? 'Logout' : 'Login' ?></a>
                 </div>
             </div>
         </nav>

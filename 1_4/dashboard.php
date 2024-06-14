@@ -1,7 +1,7 @@
 <?php
 require_once 'libs/main.php';
 
-printHeader();
+printHeader('Y');
 ?>
 
 <main class="container">
