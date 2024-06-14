@@ -7,7 +7,7 @@ printHeader();
 <main class="container">
     <h1>Welcome to Q8 University eLearning Platform!</h1>
 
-    <img src="assets/campus.jpg" class="w-100 mb-5" alt="Campus">
+    <img src="assets/campus.jpg" class="w-100 mb-5" alt="Campus" height="300">
 
     <h2>OUR COURSES</h2>
 
