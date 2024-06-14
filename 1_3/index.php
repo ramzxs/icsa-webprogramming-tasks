@@ -9,7 +9,7 @@ printHeader();
 
     <img src="assets/campus.jpg" class="w-100 mb-5" alt="Campus">
 
-    <h2>COURSES</h2>
+    <h2>OUR COURSES</h2>
 
     <div class="row">
         <div class="card me-5" style="width: 18rem;">
